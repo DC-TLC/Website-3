@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Website #3</title>
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link
+            href="https://fonts.googleapis.com/css2?family=Barlow:wght@300;400;500&display=swap"
+            rel="stylesheet"
+        />
+        <link
+            rel="stylesheet"
+            href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta2/css/all.min.css"
+        />
+        <link rel="stylesheet" href="main.css" />
+    </head>
+    <body>
+        <!--==========| Header section |==========-->
+        <header>
+            <div class="banner">
+                <nav class="split">
+                    <a href="index.html" class="logo">
+                        <h3>DC - WD</h3>
+                    </a>
+                    <div class="menu">
+                        <i class="fas fa-times close-menu"></i>
+                        <ul class="nav-links">
+                            <li>
+                                <a href="#!">About</a>
+                            </li>
+                            <li>
+                                <a href="#!">Articles</a>
+                            </li>
+                            <li class="active">
+                                <a href="#!">Subscribe</a>
+                            </li>
+                        </ul>
+                    </div>
+                    <i class="fas fa-bars hamburger-menu"></i>
+                </nav>
+                <div class="banner-content">
+                    <h1 class="banner__header">DarkCode</h1>
+                    <h3 class="banner__sub-header header--w-line">
+                        The Legendary Coder
+                    </h3>
+                </div>
+            </div>
+        </header>
+
+        <!--==========| Article section |==========-->
+        <section class="article bg-light-100">
+            <h3 class="section-header header--w-line">Latest Articles</h3>
+            <div class="split">
+                <div class="card">
+                    <img
+                        src="images/card_img1.jpg"
+                        alt="Image 1"
+                        class="card__img"
+                    />
+                    <div class="card__body">
+                        <p class="line-above-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Rem aspernatur dolorum.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img
+                        src="images/card_img2.jpg"
+                        alt="Image 2"
+                        class="card__img"
+                    />
+                    <div class="card__body">
+                        <p class="line-above-text">
+                            Lorem ipsum dolor sit amet consectetur adipisicing
+                            elit. Corporis, obcaecati.
+                        </p>
+                    </div>
+                </div>
+                <div class="card">
+                    <img
+                        src="images/card_img3.jpg"
+                        alt="Image 3"
+                        class="card__img"
+                    />
+                    <div class="card__body">
+                        <p class="line-above-text">
+                            Lorem ipsum dolor sit amet, consectetur adipisicing
+                            elit. Maxime nisi possimus.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!--==========| About section |==========-->
+        <section class="about bg-light-200">
+            <div class="split">
+                <div class="about__img">
+                    <img src="images/about.jpg" alt="About Image" />
+                </div>
+                <div class="about__content">
+                    <h3 class="section-header header--w-line">About</h3>
+                    <p class="about__text">
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        Eaque omnis nisi aliquid repudiandae, vel quasi
+                        inventore suscipit distinctio repellendus, architecto
+                        adipisci vitae impedit magni optio ut! Aspernatur
+                        corporis nulla explicabo sed soluta, culpa quas eos
+                        ratione odit unde exercitationem, facilis error expedita
+                        nam obcaecati quaerat repellat veritatis quos officiis
+                        quibusdam cupiditate mollitia hic minima? Voluptas ipsum
+                        non minima ea iure commodi assumenda molestias in,
+                        dolorum error, expedita explicabo accusamus. Ipsa iure
+                        omnis harum, molestiae iusto delectus rem nobis
+                        obcaecati cupiditate!
+                    </p>
+                </div>
+            </div>
+        </section>
+
+        <!--==========| Subscribe section |==========-->
+        <section class="subscribe">
+            <div class="center-content">
+                <h3 class="section-header">Subscribe</h3>
+                <p>Subscribe to our channel for updates</p>
+                <form class="subscribe__form">
+                    <input type="email" />
+                    <button type="submit" class="action-btn">Submit</button>
+                </form>
+            </div>
+        </section>
+
+        <!--==========| Footer section |==========-->
+        <footer class="footer-split">
+            <ul class="nav-links">
+                <li>
+                    <a href="#!">About</a>
+                </li>
+                <li>
+                    <a href="#!">Articles</a>
+                </li>
+                <li>
+                    <a href="#!">Subscribe</a>
+                </li>
+            </ul>
+            <div class="social-icons">
+                <a href="#!" class="icon-link">
+                    <i class="fab fa-facebook" class="icon-link__icon"></i>
+                </a>
+                <a href="#!" class="icon-link">
+                    <i class="fab fa-google-plus" class="icon-link__icon"></i>
+                </a>
+                <a href="#!" class="icon-link">
+                    <i class="fab fa-twitter" class="icon-link__icon"></i>
+                </a>
+                <a href="#!" class="icon-link">
+                    <i class="fab fa-facebook-messenger icon-link__icon"></i>
+                </a>
+            </div>
+        </footer>
+
+        <!--==========| JavaScript Code For Navigation |==========-->
+        <script>
+            function toggleMenu() {
+                document.querySelector(".menu").classList.toggle("show");
+            }
+
+            document.querySelector(".hamburger-menu").onclick = toggleMenu;
+            document.querySelector(".close-menu").onclick = toggleMenu;
+        </script>
+    </body>
+</html>

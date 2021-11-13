@@ -1,0 +1,464 @@
+:root {
+    --clr-accent: #004b20;
+    --clr-light-100: #dcf9e8;
+    --clr-light-200: #b2f9d1;
+    --clr-black-800: #505050;
+
+    --font-size-100: 1.6rem;
+    --font-size-200: 1.8rem;
+    --font-size-400: 4rem;
+    --font-size-600: 5rem;
+    --font-size-700: 7rem;
+    --font-size-800: 10rem;
+
+    --spacing-100: 1.5rem;
+    --spacing-500: 10rem;
+}
+
+*,
+*::before,
+*::after {
+    margin: 0;
+    padding: 0;
+    border: none;
+    outline: none;
+}
+
+html {
+    font-size: 62.5%;
+}
+
+h1,
+h2,
+h3,
+h4,
+p,
+a {
+    font-family: "Barlow", sans-serif;
+    color: var(--clr-black-800);
+}
+
+p {
+    font-size: var(--font-size-200);
+    line-height: 150%;
+}
+
+a {
+    font-size: var(--font-size-200);
+}
+
+h1,
+h2,
+h3,
+h4 {
+    text-align: center;
+    font-weight: 500;
+}
+
+h1 {
+    font-size: var(--font-size-600);
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+}
+
+img {
+    display: block;
+    width: 100%;
+}
+
+/* Reusable styles */
+.section-header {
+    font-size: var(--font-size-400);
+    text-transform: uppercase;
+    text-align: center;
+}
+
+.line-above-text::before {
+    content: "";
+    display: block;
+    width: 4rem;
+    height: 0.3rem;
+    background: var(--clr-accent);
+    border-radius: 1rem;
+    margin: 0 auto 1.5rem;
+}
+
+.header--w-line::after {
+    content: "";
+    display: block;
+    width: 5rem;
+    height: 0.3rem;
+    margin: 0 auto;
+    background: var(--clr-accent);
+    border-radius: 1rem;
+    margin-top: 1rem;
+}
+
+.action-btn {
+    padding: 1em 2em;
+    border: 2px solid var(--clr-black-800);
+    background: transparent;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 600;
+    color: var(--clr-black-800);
+    cursor: pointer;
+    transition-property: background, color;
+    transition-duration: 0.2s;
+    transition-timing-function: linear;
+}
+
+.action-btn:hover {
+    background: var(--clr-black-800);
+    color: white;
+}
+
+/*==========| Header section |==========*/
+header {
+    position: relative;
+    height: 100vh;
+    padding: var(--spacing-100);
+    box-sizing: border-box;
+}
+
+nav {
+    display: flex;
+}
+
+.menu {
+    position: fixed;
+    top: 0;
+    right: -65%;
+    min-width: 65%;
+    height: 100vh;
+    background: var(--clr-black-800);
+    color: white;
+    padding: 2em 3em;
+    box-sizing: border-box;
+    z-index: 2;
+    opacity: 0;
+    transition: all 0.5s ease-in-out;
+}
+
+.menu.show {
+    opacity: 1;
+    right: 0;
+}
+
+.logo {
+    display: none;
+}
+
+.hamburger-menu,
+.close-menu {
+    font-size: 3rem;
+}
+
+.hamburger-menu {
+    margin-left: auto;
+}
+
+.nav-links {
+    list-style: none;
+    margin-top: 2em;
+}
+
+.nav-links > li {
+    padding: 2em 0;
+}
+
+.nav-links > li > a {
+    color: white;
+    text-decoration: none;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    font-weight: 500;
+}
+
+/* Banner Section */
+.banner-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.banner {
+    height: 100%;
+    background: url(images/banner.jpg) center;
+    background-size: cover;
+    padding: var(--spacing-100);
+    box-sizing: border-box;
+}
+
+.banner__header {
+    font-size: var(--font-size-600);
+}
+
+.banner__sub-header {
+    font-size: 3rem;
+}
+
+/*==========| Article section |==========*/
+.article {
+    padding: 5rem var(--spacing-100) var(--spacing-100);
+    background: var(--clr-light-100);
+}
+
+.article .split {
+    display: flex;
+    flex-direction: column;
+}
+
+.card {
+    margin-top: 1.5em;
+}
+
+.card__body {
+    padding: 3rem;
+    background: white;
+    text-align: center;
+}
+
+.card__body p {
+    font-weight: 400;
+}
+
+/*==========| About section |==========*/
+.about__content {
+    padding: 2.5rem var(--spacing-100);
+}
+
+.about__text {
+    text-align: justify;
+    margin-top: 2.5rem;
+    font-size: var(--font-size-100);
+    color: black;
+    opacity: 0.8;
+}
+
+/*==========| About section |==========*/
+.subscribe {
+    background: var(--clr-light-200);
+    text-align: center;
+    padding: 7rem var(--spacing-100);
+}
+
+.subscribe__form > * {
+    display: block;
+    width: 100%;
+    box-sizing: border-box;
+    margin-top: 2rem;
+}
+
+.subscribe__form input {
+    padding: 1em 1.5em;
+    font-size: var(--font-size-100);
+}
+
+.subscribe__form input:hover,
+.subscribe__form input:focus {
+    background: var(--clr-black-800);
+    color: white;
+}
+
+/*==========| Footer section |==========*/
+.footer-split {
+    padding: 7rem var(--spacing-100);
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+}
+
+footer .nav-links {
+    margin-top: 0;
+}
+
+footer .nav-links a,
+.social-icons i {
+    color: var(--clr-black-800);
+}
+
+footer .nav-links li {
+    text-align: center;
+}
+
+footer .nav-links li:first-child {
+    padding-top: 0;
+}
+
+.social-icons {
+    margin-top: 3rem;
+}
+
+.social-icons a {
+    text-decoration: none;
+    font-size: var(--font-size-400);
+}
+
+.social-icons a + a {
+    margin-left: 2rem;
+}
+
+@media (min-width: 600px) {
+    .about__content,
+    .subscribe,
+    .footer-split {
+        padding: var(--spacing-500);
+    }
+
+    .article {
+        padding: var(--spacing-500);
+    }
+
+    .article h3 {
+        margin-bottom: 3rem;
+    }
+
+    .card__img {
+        height: 25rem;
+        object-fit: cover;
+    }
+}
+
+@media (min-width: 1000px) {
+    /*==========| Banner section |==========*/
+    .banner {
+        padding: 3rem;
+    }
+
+    .close-menu,
+    .hamburger-menu {
+        display: none;
+    }
+
+    .logo {
+        display: block;
+        text-decoration: none;
+        color: black;
+        font-size: var(--font-size-200);
+        letter-spacing: 0.1em;
+    }
+
+    .logo h3 {
+        font-weight: bold;
+    }
+
+    nav {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .menu {
+        position: unset;
+        min-width: unset;
+        height: unset;
+        background: transparent;
+        padding: unset;
+        opacity: 1;
+        transition: unset;
+    }
+
+    .nav-links {
+        display: flex;
+        list-style: none;
+        margin-top: unset;
+    }
+
+    .nav-links > li {
+        padding: 1em 2em;
+    }
+
+    .nav-links > li.active {
+        border: 0.2em solid var(--clr-black-800);
+    }
+
+    .nav-links > li > a {
+        color: var(--clr-black-800);
+        font-size: 1.3rem;
+        text-decoration: none;
+        text-transform: uppercase;
+        letter-spacing: 0.1em;
+        font-weight: 500;
+    }
+
+    .banner__header {
+        font-size: var(--font-size-800);
+    }
+
+    /*==========| Article section |==========*/
+    .article .split {
+        padding-left: 20rem;
+        padding-right: 20rem;
+        flex-direction: row;
+    }
+
+    .article .split > * + * {
+        margin-left: 5rem;
+    }
+
+    .card {
+        box-shadow: 0 25px 12px -15px rgba(0, 0, 0, 0.2);
+    }
+
+    /*==========| About section |==========*/
+    .about .split {
+        display: flex;
+    }
+
+    .about .split > * {
+        flex-basis: 50%;
+    }
+
+    .about__img img {
+        height: 100%;
+        object-fit: cover;
+        object-position: right;
+    }
+
+    .about__content {
+        padding-left: 20rem;
+        padding-right: 20rem;
+        box-sizing: border-box;
+    }
+
+    /*==========| Subscribe section |==========*/
+    .center-content {
+        width: 50rem;
+        margin: 0 auto;
+    }
+
+    .action-btn {
+        width: unset;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /*==========| Footer section |==========*/
+    .footer-split {
+        padding: 7rem 5rem;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    footer .nav-links li {
+        padding: 0 2rem;
+    }
+
+    .social-icons {
+        margin-top: 0;
+    }
+
+    .social-icons a + a {
+        margin-left: 1rem;
+    }
+
+    footer .nav-links {
+        order: 2;
+    }
+
+    footer .social-icons {
+        order: 1;
+    }
+}
